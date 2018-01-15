@@ -1,0 +1,35 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: teamcity-agent
+  labels:
+    app: teamcity-agent
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: teamcity-agent
+  template:
+    metadata:
+      labels:
+        app: teamcity-agent
+    spec:
+      containers:
+      - name: teamcity-agent
+        image: gcr.io/<YOUR-PROJECT-DI>/teamcity-agent:1.0.4
+        env:
+         - name: SERVER_URL
+           value: "http://35.205.85.14/"
+        volumeMounts:
+          - mountPath: /var/run
+            name: docker-sock
+          - mountPath: /data/teamcity_agent/conf
+            name: teamcity-agent-config
+      volumes:
+        - name: teamcity-agent-config
+          gitRepo:
+            repository: "https://github.com/fstn/teamcity_agent-config.git"
+            revision: "9cdaa8e8ba0b8367709dabf3a54a0a0eca68228d"
+        - name: docker-sock
+          hostPath:
+              path: /var/run
