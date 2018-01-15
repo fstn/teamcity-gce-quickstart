@@ -1,30 +1,4 @@
 
-#### Hmmm, TeamCity, what is it?
-
-![](https://cdn-images-1.medium.com/max/800/1*3ks1tAY65gSjCHxT1PYb6A.png)
-
-It’s a great solution for continuous integrationIf you don’t know TeamCity, let
-check [it](https://www.jetbrains.com/teamcity/).
-
-I would recommend the free version if you need less than 3 build agent:
-
-#### But when use TeamCity instead of Travis CI, CircleCI or Codeship?
-
-TeamCity is an automation server by JetBrains that **offers out of the box
-usability**. TeamCity provides integration to Eclipse and has a bunch of plugins
-for 3rd party integrations as well. TeamCity supports many version control
-systems. **TeamCity offers full features in its free version and is only limited
-in build configurations and agents**. TeamCity can run locally or remotely so it
-supports Hardware In the Loop tests and can run compilers with node locked
-licenses.
-
-TeamCity offers more usable interface than Jenkins, reduces the administrative
-overhead and has a shorter learning curve than Jenkins.
-
-We wanted to replace our Jenkins for various reasons. After some search,
-TeamCity seemed like a good choice if you are looking for a non hosted free
-solution to build Docker containers.
-
 #### Getting started
 
 Here is the architecture that we will put in place:
