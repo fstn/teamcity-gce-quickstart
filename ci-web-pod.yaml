@@ -1,0 +1,18 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  name: web-pod
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-pod
+  template:
+    metadata:
+      name: web-pod
+      labels:
+        app: web-pod
+    spec:
+      containers:
+      - name: web-pod
+        image: gcr.io/<YOUR-PROJECT-ID>/web-pod:latest  
