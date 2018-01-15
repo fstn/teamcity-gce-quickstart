@@ -229,13 +229,6 @@ address :
         port: 80
         targetPort: 8111
 
-### Database configuration
-
-In order to get your database proxy user and password, you need to open the
-secrets doing this:
-
-    kubectl get secret cloudsql-db-credentials -o yaml
-
 ### Install a build agent
 
 <br> 
