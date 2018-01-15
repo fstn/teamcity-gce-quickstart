@@ -229,21 +229,6 @@ address :
         port: 80
         targetPort: 8111
 
-### Install a build agent
-
-<br> 
-
-![](https://cdn-images-1.medium.com/max/800/1*Eu-o7ozH0mjt6kjJAnbRcg.png)
-
-<br> 
-
-![](https://cdn-images-1.medium.com/max/800/1*pbeMpfkNQgG0QcGXfYQLvg.png)
-
-<br> 
-
-<br> 
-
-<br> 
 
 ### Bonus
 
